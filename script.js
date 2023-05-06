@@ -94,7 +94,21 @@ c('.pizzaInfo--addButton').addEventListener('click', () => {
             qt: modalQt
         });
     }
-
+    updateCart();
     closeModal();
 });
+
+//Atualizar carrinho
+function updateCart(){
+    if(cart.length > 0){
+        c('aside').classList.add('show');
+        for(let i in cart){
+
+            let pizzaItem = pizzaJson.find((item) => item.id == cart[i].id);
+
+        }
+    } else{
+        c('aside').classList.remove('show');
+    }
+}
 
